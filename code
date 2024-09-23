@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int isVegetarian;
+    int maxCalories;
+
+    // Prompt for vegetarian status
+    printf("Enter 1 for vegetarian, 0 otherwise: ");
+    scanf("%d", &isVegetarian);
+
+    // Prompt for maximum calories
+    printf("Enter calories: ");
+    scanf("%d", &maxCalories);
+
+    // Determine breakfast choice
+    if (isVegetarian == 1) {
+        if (maxCalories < 100) {
+            printf("Fruit\n");
+        } else {
+            printf("Oatmeal\n");
+        }
+    } else {
+        if (maxCalories < 200) {
+            printf("Power bar\n");
+        } else {
+            printf("Anything\n");
+        }
+    }
+
+    return 0;
+}
